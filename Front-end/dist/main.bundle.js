@@ -125,7 +125,7 @@ if(false) {}
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "body {\r\n  margin: 0;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  background-color: brown;\r\n}\r\n\r\nheader {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n.post-link {\r\n  text-decoration: none;\r\n}\r\n\r\nfooter {\r\n  min-height: 100px;\r\n  background-color: #0e437970;\r\n  color: #929eaa;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  margin-top: 40px;\r\n  font-size: 14px;\r\n}\r\n\r\n/* ADD styling for all of the divs in post.html to match  */\r\n\r\n#individual-post-title {\r\n}\r\n\r\n#individual-post-date {\r\n}\r\n\r\n#individual-post-content {\r\n}\r\n", ""]);
 
 
 
@@ -748,6 +748,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/css/style.css */ "./assets/css/style.css");
 /* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_css_style_css__WEBPACK_IMPORTED_MODULE_0__);
 
+var API_URL = 'http://localhost:3000/api/posts';
+var API_BASE_URL = 'http://localhost:3000/';
+
+window.onload = function () {
+  getPosts();
+};
+
+var getPosts = function getPosts() {};
+
+var buildPosts = function buildPosts(blogPosts) {};
 
 /***/ })
 

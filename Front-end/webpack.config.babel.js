@@ -40,9 +40,18 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'index.html'),
-      chunks: ['index'],
     }),
-  ].concat(multipleHtmlPlugins),
+    new HtmlWebpackPlugin({
+      template: 'new-post.html', // relative path to the HTML files
+      filename: 'new-post.html', // output HTML files
+      chunks: ['new-post'], // respective JS files
+    }),
+    new HtmlWebpackPlugin({
+      template: 'single-post.html', // relative path to the HTML files
+      filename: 'single-post.html', // output HTML files
+      chunks: ['single-post'], // respective JS files
+    }),
+  ],
   stats: 'minimal',
   devtool: 'source-map',
   mode: 'development',
