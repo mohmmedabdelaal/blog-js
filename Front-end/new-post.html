@@ -7,12 +7,45 @@
     <title>New post</title>
   </head>
   <body>
-    <header>
-      <div class="name">
-        <h1>Blogista</h1>
+    <div class="container new-post-page">
+      <header>
+        <div class="header-container">
+          <div class="header-blog-text">
+            <div class="title">New Post</div>
+            <div class="subtext">Let's add a new blog post!</div>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <div class="main-container">
+          <div class="navigation">
+            <a href="index.html" class="btn">Back</a>
+          </div>
+        </div>
+        <div class="form-container">
+          <form>
+            <input
+              id="from-post-title"
+              type="text"
+              name="post-title"
+              placeholder="Post Title"
+            />
+            <textarea
+              name="post-content"
+              id="from-post-content"
+              placeholder="Post Content"
+            ></textarea>
+            <div>
+              <label for="post">Choose Image</label>
+              <input type="file" id="post" name="post-image" accept="image/" />
+            </div>
+            <button id="form-post-submit" type="submit">Submit</button>
+          </form>
+        </div>
       </div>
-      <div class="loading-img"></div>
-      <div class="profile-title">Mohamed Abdul-aal</div>
-    </header>
+    </div>
+    <footer>
+      <h4>Hello from Mohamed Abdul-aal❤️</h4>
+    </footer>
   </body>
 </html>

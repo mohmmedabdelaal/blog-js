@@ -144,6 +144,7 @@ p {
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
+  margin-bottom: 1rem;
 }
 .btn:hover {
   background: var(--clr-primary-8);
@@ -227,14 +228,14 @@ header::before {
   border-style: solid;
 
   border-width: 1px;
-  border-radius: 20px;
+  border-radius: 10px;
   border-color: #929eaa;
   transition: all 0.5s;
 }
 .post-photo {
   max-width: 30%;
   max-height: 100%;
-  border-radius: 20px 0 0 20px;
+  border-radius: 10px 0 0 10px;
   overflow: hidden;
   padding-right: 1rem;
 }
@@ -246,7 +247,7 @@ header::before {
 footer {
   min-height: 100px;
   background-color: #0e437970;
-  color: #929eaa;
+  color: var(--clr-primary-10);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,11 +257,69 @@ footer {
 
 /* ADD styling for all of the divs in post.html to match  */
 
+.wellpaper {
+  background-image: url(https://images.unsplash.com/photo-1661895613468-137da35b01e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+  background-size: cover;
+  background-position: center;
+}
+.post-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 1px;
+  background-color: #fff;
+}
 #individual-post-title {
+  color: #cfd2cf;
 }
 
 #individual-post-date {
+  color: #929eaa;
 }
 
 #individual-post-content {
+  min-height: 50vh;
+  margin-top: 2rem;
+}
+
+/* New post */
+
+form > * {
+  display: block;
+  margin-top: 16px;
+  font-size: 18px;
+}
+
+#form-post-title {
+  width: 300px;
+}
+
+#form-post-title,
+#form-post-content {
+  border: 1px solid #ced4da;
+  padding: 8px;
+  border-radius: 5px;
+  color: #495057;
+}
+
+#form-post-content {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 300px;
+}
+
+#form-post-submit {
+  background-color: #004186;
+  border-color: #004186;
+  color: white;
+  padding: 0.375rem 0.75rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#form-post-submit:hover {
+  background-color: #002349;
 }
