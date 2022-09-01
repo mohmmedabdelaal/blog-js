@@ -1,17 +1,13 @@
+import glob from 'glob';
 import path from 'path';
+
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-let htmlPageNames = ['new-post', 'single-post'];
-let multipleHtmlPlugins = htmlPageNames.map((name) => {
-  return new HtmlWebpackPlugin({
-    template: `./${name}.html`, // relative path to the HTML files
-    filename: `${name}.html`, // output HTML files
-    chunks: [`${name}`], // respective JS files
-  });
-});
-
 export default {
-  entry: path.join(__dirname, 'src/index.js'),
+  entry: glob.sync('./src/**.js').reduce((obj, el) => {
+    obj[path.parse(el).name] = el;
+    return obj;
+  }, {}),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].bundle.js',
