@@ -19,21 +19,21 @@ const getPosts = async () => {
 
     return `
     <a class="post-link"  href="${postLink}">
-    <div class="post">
-    <div class="post-photo">
-    <img
-    class="cover"
-    src="${baseImage}"
-    />
-    </div>
-    <div class="post-content">
-    <p class="post-date">${date}</p>
-    <h3 class="post-title">${title}</h3>
-    <h4 class="post-description">
-    ${content}
-    </h4>
-    </div>
-    </div>
+      <div class="post">
+        <div class="post-photo">
+          <img
+          class="cover"
+          src="${baseImage}"
+          />
+        </div>
+        <div class="post-content">
+          <p class="post-date">${date}</p>
+          <h3 class="post-title">${title}</h3>
+          <h4 class="post-description">
+          ${content}
+          </h4>
+        </div>
+      </div>
     </a>
     `;
   });

@@ -6,6 +6,8 @@ const postData = new Posts();
 
 const PORT = 3000;
 
+app.use('/uploads', express.static('uploads'));
+
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();

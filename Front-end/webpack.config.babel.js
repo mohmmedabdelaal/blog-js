@@ -35,7 +35,9 @@ export default {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'index.html'),
+      template: 'index.html',
+      filename: 'index.html',
+      chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
       template: 'new-post.html', // relative path to the HTML files
