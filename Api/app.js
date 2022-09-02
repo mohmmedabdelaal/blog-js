@@ -1,10 +1,19 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 const multer = require('multer');
-console.log(multer);
+const Posts = require('./models/post');
+const postData = new Posts();
 
-var PORT = 3000;
+const PORT = 3000;
 
+app.get('/srv/post', (req, res) => {
+  res.status(200).send(postData.get());
+});
+
+app.get('/srv/post/:postid', (req, res) => {
+  res.status(200).send(postData.getSinglePost(req.params.postid));
+  postData.get(req.params.postid);
+});
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
