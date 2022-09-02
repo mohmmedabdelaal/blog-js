@@ -6,20 +6,27 @@ const postData = new Posts();
 
 const PORT = 3000;
 
-app.get('/srv/post', (req, res) => {
-  res.status(200).send(postData.get());
-});
-
-app.get('/srv/post/:postid', (req, res) => {
-  res.status(200).send(postData.getSinglePost(req.params.postid));
-  postData.get(req.params.postid);
-});
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 });
 
 app.use(express.json());
+
+app.get('/srv/post', (req, res) => {
+  res.status(200).send(postData.get());
+});
+
+app.get('/srv/post/:postid', (req, res) => {
+  const postId = req.params.postid;
+  const posts = postData.get();
+  const foundPost = posts.find((post) => post.id == postId);
+  if (foundPost) {
+    res.status(200).send(foundPost);
+  } else {
+    res.status(404).send('Id Not Found');
+  }
+});
 
 app.get('/', (req, res) => {
   res.status(200).send('The server now is running');
