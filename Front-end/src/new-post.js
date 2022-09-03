@@ -19,10 +19,8 @@ form.addEventListener('submit', (e) => {
   data.append('title', title);
   data.append('content', content);
 
-  fetch(API_URL, {
-    method: 'POST',
-    body: data,
-  })
+  axios
+    .post(API_URL, data)
     .then((res) => console.log(res))
     .then(() => {
       setTimeout(() => {

@@ -40,4 +40,3 @@ const getPosts = async () => {
   mainContent.innerHTML = newPost;
 };
 
-const buildPosts = (blogPosts) => {};
