@@ -180,17 +180,28 @@ main {
 
 header {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
   height: 14rem;
   border-bottom: 1px solid black;
-  background-image: url(../img/banner.jpeg);
   background-size: cover;
   background-position: center;
   color: #cfd2cf;
   text-shadow: 1px 1px 1px #000, 3px 3px 5px #fa9494;
   position: relative;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 2;
+}
+
+.add-post {
+  margin: 2rem;
+  z-index: 100;
 }
 
 header::before {
@@ -202,6 +213,10 @@ header::before {
   height: 100%;
   background-color: #000;
   opacity: 0.3;
+}
+
+.main-page header {
+  background-image: url(../img/banner.jpeg);
 }
 
 .name {
@@ -224,9 +239,7 @@ header::before {
 
 .post {
   display: flex;
-  height: 10rem;
-  width: 100%;
-  justify-content: center;
+  background-color: #fff;
   border-style: solid;
   overflow: hidden;
   border-width: 1px;
@@ -276,6 +289,7 @@ footer {
 }
 #individual-post-title {
   color: #cfd2cf;
+  font-size: 2rem;
 }
 
 #individual-post-date {

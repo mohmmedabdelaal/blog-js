@@ -1,7 +1,7 @@
 import '../assets/css/style.css';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/srv/post';
+const API_URL = 'http://localhost:3000/api/posts';
 const API_BASE_URL = 'http://localhost:3000/';
 const mainContent = document.querySelector('.main-content');
 

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const PATH = './data.json';
 
-class Posts {
+class Post {
   add(newPost) {
     const currentData = this.readData();
     currentData.unshift(newPost);
@@ -34,4 +34,4 @@ class Posts {
   }
 }
 
-module.exports = Posts;
+module.exports = Post;
