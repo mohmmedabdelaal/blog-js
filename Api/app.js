@@ -6,6 +6,7 @@ const postsData = new Post();
 
 const PORT = 3000;
 
+/// multer to save image
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './uploads/');
@@ -25,11 +26,13 @@ const getExt = (mimetype) => {
 };
 
 var upload = multer({ storage: storage });
+////////////
 
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 });
+
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 

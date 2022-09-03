@@ -7,10 +7,6 @@ class Post {
     currentData.unshift(newPost);
     this.storeData(currentData);
   }
-  getSinglePost(id) {
-    const currentData = this.readData();
-    return currentData.find((post) => post.id === id);
-  }
 
   get() {
     return this.readData();
